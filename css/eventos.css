@@ -1,0 +1,59 @@
+#concierto{
+  width: 95%;
+  margin-left:5%;
+  margin-top:2%;
+
+}
+.artista div{
+}
+.artista{
+  width: 22%;
+  float: left;
+  margin:30px auto;
+  overflow-y: auto;
+  height: 100%;
+  margin-top: 5%;
+  margin-left:2%;
+
+}
+
+#topmusic
+{
+  margin-left: 65px;
+}
+
+#carousel
+{
+  margin-top: 50px;
+  margin-left: 65px;
+}
+
+#conciertohome
+{
+  width: 95%;
+  margin-left:5%;
+  margin-top:10%;
+
+}
+
+#festivalhome
+{
+  margin-top: 450px;
+  margin-left: 90px;
+}
+
+#monologohome
+{
+  margin-top: 250px;
+  margin-left: 90px;
+}
+
+#musicalhome
+{
+  margin-top: 450px;
+  margin-left: 90px;
+}
+
+#piechart {
+  margin-top: 350px;
+}

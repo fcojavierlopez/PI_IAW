@@ -1,0 +1,78 @@
+#imagen {
+  clear: both;
+  width: 30%;
+  margin-top:30px;
+  float: left;
+}
+
+#desc {
+  width: 45%;
+  float: left;
+  margin-top: 35px;
+  margin-left: 110px;
+}
+
+#precio {
+  margin-top: 25px;
+}
+
+#nombre
+{
+  clear: both;
+  width: 30%;
+  margin-top:30px;
+  float: left;
+  margin-left: 25px;
+}
+
+#fecha
+{
+  width: 100%;
+  margin-top:30px;
+  float: left;
+  margin-left: 30px;
+}
+
+#localidad
+{
+
+  float: left;
+  margin-left: 30px;
+}
+
+#precio
+{
+  margin-top: 30px;
+  float: left;
+  margin-left: -142px;
+}
+
+#comprafestival
+{
+  margin-top: 40px;
+  float: left;
+  margin-left: 50px;
+}
+
+#titulofestival
+{
+  margin-top: -150px;
+  margin-bottom: 50px;
+  float: right;
+  margin-right: 350px;
+
+}
+
+
+#tablafestival
+{
+  margin-top: -50px;
+  margin-left: 200px;
+
+}
+
+#tablamusical
+{
+  margin-top: 30px;
+  margin-left: 300px;
+}
