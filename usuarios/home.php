@@ -5,37 +5,34 @@
     <title>Home</title>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/eventos.css">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
+    <!--Elección del tema  -->
+    <link rel="stylesheet" href=<?php
 
-      function drawChart() {
+    session_start();
+    include 'conexion.php';
+    $user=$_SESSION['CORREO_ELECTRONICO'];
 
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Conciertos',  5],
-          ['Festivales',  3],
-          ['Monólogos',  3],
-          ['Musicales', 3],
+    $consulta="SELECT TEMA from usuarios where CORREO_ELECTRONICO='$user';";
+    $result = $connection->query($consulta);
+    $obj=$result->fetch_object();
+    $tema=$obj->TEMA;
 
-        ]);
+    if ($tema==1) {
+      echo "../css/eventos.css";
+    }if ($tema==2) {
+      echo "../css/eventos2.css";
+    }if($tema==3) {
+      echo "../css/eventos3.css";
+    }
+    ?>
+    >
+    <!--FIN Elección del tema  -->
 
-        var options = {
-          title: 'EVENTOS'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
   </head>
   <body>
 
     <?php
-    session_start();
+
 
     if ($_SESSION['TIPO_USUARIO']==NULL) {
       header ("Location: index.html");
@@ -46,6 +43,13 @@
     ?>
 
     <br><br><br>
+
+    <p><b>Selector de Temas</b></p>
+
+    <a href='../fonts/blanco.php?usuario=<?php echo $user; ?>'>B/</a>
+    <a href='../fonts/verdep.php?usuario=<?php echo $user; ?>'>V/</a>
+    <a href='../fonts/cyan.php?usuario=<?php echo $user; ?>'>C</a>
+
     <?php
 
       echo "<div id='topmusic'>";
@@ -60,7 +64,7 @@
 
       echo "<div>";
 
-      include 'conexion.php';
+
 
       $query="SELECT artista.NOMBRE, artista.IMAGEN FROM eventos join asiste ON eventos.ID_EVENTO = asiste.ID_EVENTO
                                                                  JOIN artista ON asiste.ID_ARTISTA = artista.ID_ARTISTA
@@ -142,11 +146,12 @@
                 }
                 echo "</div>";
 
+          // dashboard
 
+          include 'dashboard.php';
 
      ?>
-   </hr>
-        <div id="piechart" style="width: 700px; height: 300px;"></div>
+
      <script src="../js/jquery.js"></script>
      <script src="../js/bootstrap.min.js"></script>
   </body>
