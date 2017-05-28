@@ -73,10 +73,14 @@ if ($result = $connection->query($query2)){
 
 <?php
       echo "</tr>";
+      echo"<a href='pdf.php?id=$objeto->NOMBRE'>
+  <i type='submit' class='glyphicon glyphicon-print' name='imprimir'></i></a>";
+
   }
 }
 }
     echo "</table>";
+
 
         //Cerramos el array.
         $resultado->close();

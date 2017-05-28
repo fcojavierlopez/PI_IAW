@@ -52,9 +52,8 @@
       echo "<div id='titulofestival'>";
       echo "<h3>Artistas asistentes en el Evento</h3>";
       echo "</div>";
-
-
-
+      echo"<a href='pdfasistente_festivas.php?id=$objeto->NOMBRE'>
+  <i type='submit' class='glyphicon glyphicon-print' name='imprimir'></i></a>";
     }
     ?>
 
