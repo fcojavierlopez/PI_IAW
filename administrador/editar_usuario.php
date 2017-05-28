@@ -95,6 +95,8 @@ th {
                     echo '</tr>';
                 }
 
+                echo"<a href=tablaimprime.php>
+                <i type='submit' class='glyphicon glyphicon-print' name='imprimir'></i></a>";
                 //Cerramos el array.
                 $resultado->close();
                 unset($objeto);
