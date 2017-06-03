@@ -9,7 +9,28 @@
     <link rel="stylesheet" href=<?php
 
     session_start();
-    include 'conexion.php';
+    $nombre="conexion.php";
+$instalador = "instalador";
+$index="instalador/index.php";
+$uno="instalador/uno.php";
+$dos="instalador/dos.php";
+$tres="instalador/tres.php";
+$cuatro="instalador/cuatro.php";
+
+    if(file_exists($nombre)){
+include($nombre);
+if(file_exists($index)){
+unlink($index);
+unlink($uno);
+unlink($dos);
+unlink($tres);
+unlink($cuatro);
+rmdir($instalador);
+}
+}else{
+header("Location:../instalador/index.php");
+}
+
     $user=$_SESSION['CORREO_ELECTRONICO'];
 
     $consulta="SELECT TEMA from usuarios where CORREO_ELECTRONICO='$user';";
