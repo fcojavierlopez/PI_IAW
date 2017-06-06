@@ -23,9 +23,9 @@
     <?php if (!isset($_POST["example"])) : ?>
         <form class="checkclass" name="examples" id="examples" novalidate method="post">
         <div class="checkbox">
-        <label><input type="checkbox" name="example">Ejemplo de Musical</label>
+        <center><label><input type="checkbox" name="example">Ejemplo de Musical</label></center>
         <br>
-         <input type="submit" value="Enviar">
+         <center><input type="submit" value="Enviar"></center>
         </div>
         </form>
       <?php else :?>
@@ -35,7 +35,7 @@
           VALUES ('1', 'Madrid', 'Madrid', 'España', NULL, NULL);";
 
           $result= $connection->query($query2);
-          
+
 
           $query="INSERT INTO `eventos`(`ID_EVENTO`, `NOMBRE`, `TIPO`, `PRECIO`, `URL`, `FECHA_INICIO`, `FECHA_FIN`, `ID_LUGAR`)
            VALUES (1,'Ejemplo','musical',20,'ejemplo.es','2017-06-20','2017-06-20',1)";
