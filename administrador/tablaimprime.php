@@ -1,5 +1,5 @@
 <?php
-require('../libreria/fpdf.php');
+require('../fpdf181/fpdf.php');
 require_once("../usuarios/conexion.php");
 class PDF extends FPDF
 {
