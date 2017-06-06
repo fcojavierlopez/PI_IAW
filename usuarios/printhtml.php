@@ -1,5 +1,5 @@
 <?php
-require('../libreria/fpdf.php');
+require('../fpdf181/fpdf.php');
 class PDF_HTML extends FPDF
 {
     var $B=0;
